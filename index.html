@@ -1,20 +1,168 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<div>
-    <head>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraFlix</title>
+
+    <title>BlueFlix - Filmes e Séries</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-    <h1> AluraFlix</h1>
-    <p>Site de filmes <strong>ONLINE</strong> totalmente <em>LEGALIZADO</em> e nem um pouco duvidoso</p>
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="nav">
+            <a href="#inicio" class="logo">
+                BLUE<span>FLIX</span>
+            </a>
+            <nav class="menu">
+                <a href="#inicio">Início</a>
+                <a href="#filmes">Filmes</a>
+                <a href="#series">Séries</a>
+                <a href="#categorias">Categorias</a>
+            </nav>
+            <!-- PESQUISA -->
+            <div class="search">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Buscar títulos..."
+                    oninput="filterCards()"
+                >
+            </div>
+        </div>
     </header>
-<main>
-    <h2>Aranhaverso</h2>
-    <p>Resumo do filme:Em Homem-Aranha: Através do Aranhaverso, Miles Morales é catapultado pelo multiverso e se une à Gwen Stacy e a uma nova equipe de Pessoas-Aranha. Quando os heróis entram em conflito sobre como lidar com uma nova ameaça, Miles precisa enfrentar seus próprios aliados e redefinir o que significa ser um herói.</p>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- BANNER -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="badge">
+                    DESTAQUE DA SEMANA
+                </span>
+                <h1>
+                    O melhor do cinema,
+                    em um só lugar.
+                </h1>
+                <p>
+                    Descubra filmes e séries populares,
+                    veja suas classificações indicativas
+                    e encontre sua próxima maratona.
+                </p>
+                <div class="buttons">
+                    <a href="#filmes" class="btn primary">
+                        Explorar agora
+                    </a>
+                    <a href="#series" class="btn secondary">
+                        Ver séries
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <!-- MAIS PROCURADOS -->
+            <section class="section" id="filmes">
+                <div class="section-header">
+                    <div>
+                        <h2>
+                            🔥 Mais procurados
+                        </h2>
+                        <p>
+                            Os títulos que estão chamando atenção
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="grid"
+                    id="popular">
+                </div>
+            </section>
+            <!-- MELHOR CLASSIFICADOS -->
+            <section class="section">
+                <div class="section-header">
+                    <div>
+                        <h2>
+                            ⭐ Melhor classificados
+                        </h2>
+
+                        <p>
+                            Favoritos da comunidade BlueFlix
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="grid"
+                    id="top">
+                </div>
+            </section>
+            <!-- SÉRIES -->
+            <section class="section" id="series">
+                <div class="section-header">
+                    <div>
+                        <h2>
+                            📺 Séries em destaque
+                        </h2>
+                        <p>
+                            Novas histórias para acompanhar
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="grid"
+                    id="seriesGrid">
+                </div>
+            </section>
+            <!-- CATEGORIAS -->
+            <section class="section" id="categorias">
+                <div class="section-header">
+                    <h2>
+                        Explorar por categoria
+                    </h2>
+                </div>
+                <div class="categories">
+                    <button class="category">
+                        Ação
+                    </button>
+
+                    <button class="category">
+                        Comédia
+                    </button>
+
+                    <button class="category">
+                        Drama
+                    </button>
+
+                    <button class="category">
+                        Ficção científica
+                    </button>
+
+                    <button class="category">
+                        Terror
+                    </button>
+
+                    <button class="category">
+                        Animação
+                    </button>
+
+                    <button class="category">
+                        Aventura
+                    </button>
+
+                    <button class="category">
+                        Mistério
+                    </button>
+                </div>
+            </section>
+        </div>
     </main>
-</div>
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <p>
+            © 2026 BlueFlix - Projeto de filmes e séries.
+        </p>
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>
